@@ -1,9 +1,13 @@
+//This file is useless. Refer to parsums.cpp
+
+
 //#include<iostream>
 #include<stdio.h>
 #include<stdlib.h>
 //#include<algorithm>
 #include<string.h>
 //using namespace std;
+
 
 #define FOR(i,n)	for(i=0;i<n;i++)
 
