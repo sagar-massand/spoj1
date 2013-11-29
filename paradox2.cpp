@@ -43,6 +43,7 @@ int main()
 	si(n)
 	while(n!=0)
 	{
+		int ans=0;
 		int num1[120],num2[120],flag[120],label[120];
 		FORi(i,1,n+1)
 		{
@@ -66,8 +67,27 @@ int main()
 				while(label[k]==0)
 				{
 					flag[k]=!(num2[j]^flag[j]);
+					label[k]=i;
+					j=k;
+					k=num1[j];
+				}
+				if(label[k]==i)
+				{
+					if(flag[k]!=(!(num2[j]^flag[j])))
+					{
+						ans=1;
+						break;
+					}
 				}
 			}
 		}
+		if(ans==1)
+		{
+			ps("PARADOX")
+		}
+		else
+			ps("NOT PARADOX")
+		si(n)
 	}
+	return 0;
 }
