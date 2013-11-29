@@ -30,7 +30,10 @@ int check_double(int mid2,char *ch,int min_add,int len)
 {
 	int i,j,k,temp;
 	temp=len-1;
-	j=temp-mid2;
+	if(ch[mid2]!=ch[mid2-1])
+		return min_add;
+	i=mid2+1;
+	j=temp-i;
 	while((i<len)&&(j>=0))
 	{
 		if(ch[i]==ch[j])
@@ -38,6 +41,7 @@ int check_double(int mid2,char *ch,int min_add,int len)
 			i++;
 			j--;
 		}
+		else if(ch[i]==)
 	}
 }
 
